@@ -13,3 +13,6 @@ sudo qemu-system-x86_64   -kernel vmlinux -initrd ~/initramfs.cpio.gz -hda /dev/
 ```
 
 You can run ```fork fetch_google``` to run the custom go command
+
+### Pre-built
+I have already checked-in pre-built binaries. You can just use it ```_install```. It is built on ubuntu for Linux (x86)
