@@ -1,5 +1,6 @@
 ### How to build and run
-Added a full script to do the build. Run ```build.sh```. It will do the following
+Added a full script to do the build. Run ```build.sh```. It will do the following. Note I have already checked-in pre-built ```_install``` 
+for X86 on linux. 
 
 1. Create required initramfs folder with all dir
 2. Have a custom init (custom_init) which will be used as init program
@@ -16,3 +17,15 @@ You can run ```fork fetch_google``` to run the custom go command
 
 ### Pre-built
 I have already checked-in pre-built binaries. You can just use it ```_install```. It is built on ubuntu for Linux (x86)
+
+### Full build
+```shell
+make defconfig
+make menuconfig
+
+# Make static binary
+Busybox Settings ---> Build Options ---> Build BusyBox as a static binary (no shared libs) ---> yes
+
+# Compile and install (dont worrk in make you may see some error. Just try make install)
+make -j8 && make install
+```
