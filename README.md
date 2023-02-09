@@ -7,6 +7,8 @@ for X86 on linux.
 3. Have a go program "fetch_google" which will be copied in final file system
 4. Make the ```initramfs.cpio.gz``` in home dir
 
+###### IMP - Above steps will do create the complete build of initramfs.cpio.gz (this will build as ~/initramfs.cpio.gz file). This is ready to run the kernel with QEMU. Now if you have a vmlinux you can use the folloowing steps to run (and debug kernel if required)
+
 ### How to run
 Use QEMU to run this. It will setup the network (defined in ```custom_init``` or ```init``` file). 
 ```sh
